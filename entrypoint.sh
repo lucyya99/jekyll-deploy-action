@@ -16,11 +16,13 @@ JEKYLL_SRC=${INPUT_JEKYLL_SRC:=./}
 JEKYLL_CFG=${INPUT_JEKYLL_CFG:=./_config.yml}
 JEKYLL_BASEURL=${INPUT_JEKYLL_BASEURL:=}
 PRE_BUILD_COMMANDS=${INPUT_PRE_BUILD_COMMANDS:=}
+KAKAO_JAVASCRIPT_KEY=${KAKAO_JAVASCRIPT_KEY}
 
 # Set default bundle path and cache
 BUNDLE_PATH=${WORKING_DIR}/vendor/bundle
 
 echo "Starting the Jekyll Deploy Action"
+echo "KAKAO_JAVASCRIPT_KEY is ${KAKAO_JAVASCRIPT_KEY}"
 
 if [[ -z "${TOKEN}" ]]; then
   echo "Please set the TOKEN environment variable."
